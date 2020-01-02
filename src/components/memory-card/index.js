@@ -13,3 +13,19 @@ function createMemoryCard() {
     $memoryCard.insertAdjacentHTML("beforeend", $icon);
 
 }
+
+function createMemoryCardFront() {
+    const $memoryCardFront = document.createElement("article");
+
+    $memoryCardFront.classList.add("memory-card");
+    $memoryCardFront.classList.add("-front");
+
+    const $iconFront = `
+        <img src="img/icon-c.png" class="icon"/>
+    `;
+
+    $root.insertBefore($memoryCardFront, null)
+    
+    $memoryCardFront.insertAdjacentHTML("beforeend", $iconFront);
+
+}
