@@ -1,4 +1,4 @@
-createMemoryCard();
+const $memoryCardGueio = createMemoryCard();
 createMemoryCard();
 createMemoryCard();
 createMemoryCard();
