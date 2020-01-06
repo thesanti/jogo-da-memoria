@@ -1,5 +1,6 @@
 function createCardsWrapper(){
-    return `
-        <section class ="wrap-cards"></section>
-    `;
+    const $cardsWrapper = document.createElement("section");
+    $cardsWrapper.classList.add("wrap-cards");
+
+    return $cardsWrapper;
 }

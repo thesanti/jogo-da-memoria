@@ -1,8 +1,8 @@
 const $root = document.querySelector("#root");
 
 const $cardsWrapper = createCardsWrapper();
-$root.insertAdjacentHTML("beforeend", $cardsWrapper);
+$root.insertAdjacentElement("beforeend", $cardsWrapper);
 
 const $memoryCardGueio = createMemoryCard();
 
-$cardsWrapper.insertAdjacentElement("beforeend", $memoryCardGueio);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardGueio);
