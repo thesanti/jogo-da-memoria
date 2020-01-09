@@ -6,7 +6,7 @@ $root.insertAdjacentElement("beforeend", $cardsWrapper);
 const $memoryCardPhp = createMemoryCard(
     {
         src:"img/icon-php.png",
-        alt:"Gueio da logo da Collabcode",
+        alt:"Ícone do livro de php",
         nameClass:"-front"
     }
 );
