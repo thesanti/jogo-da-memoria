@@ -1,11 +1,16 @@
-const createMemoryCard = (card) =>`
-    <article class="memory-card ${card.nameClass}" onClick="handleClick()">
-        <img class="icon"
-            src="${card.src}"
-            alt="${card.alt}"
-        />
-    </article>
-`;
+const createMemoryCard = (card) => {
+    const nameClass = card.nameClass;
+    const src = card.src;
+    const alt = card.alt;
+    return `
+        <article class="memory-card ${nameClass}" onClick="handleClick()">
+            <img class="icon"
+                src="${src}"
+                alt="${alt}"
+            />
+        </article>
+    `;
+};
 
 function handleClick(){
     console.log('chora');
