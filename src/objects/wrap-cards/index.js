@@ -21,5 +21,7 @@ function createCardsWrapper(){
 
     $head.insertAdjacentElement("beforeend", $style);
 
+    console.log("Entrei no wrapper, estou dentro da função");
+
     return $cardsWrapper;
 }
