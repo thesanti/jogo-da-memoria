@@ -1,6 +1,4 @@
-function getName(){
-    return "Lucas Santi";
-}
+const getName = () => "Lucas Santi"
 
 const name = getName();
 
