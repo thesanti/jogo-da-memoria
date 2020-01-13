@@ -1,4 +1,4 @@
-const createMemoryCard = ({nameClass, src, alt}) => {
+const memoryCard = () => {
 
     const $head = document.querySelector("head");
     const $style = document.createElement("style");
@@ -44,7 +44,8 @@ const createMemoryCard = ({nameClass, src, alt}) => {
 
     console.log("Entrei no memory-card, estou fora da função");
 
-    return `
+
+    return ({nameClass, src, alt}) => `
         <article class="memory-card ${nameClass}" onClick="handleClick()">
             <img class="icon"
                 src="${src}"
@@ -52,6 +53,7 @@ const createMemoryCard = ({nameClass, src, alt}) => {
             />
         </article>
     `;
+
 };
 
 function handleClick(){

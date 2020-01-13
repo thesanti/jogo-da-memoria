@@ -3,6 +3,8 @@ const $root = document.querySelector("#root");
 const $cardsWrapper = createCardsWrapper();
 $root.insertAdjacentElement("beforeend", $cardsWrapper);
 
+const createMemoryCard = memoryCard();
+
 const $memoryCardPhp = createMemoryCard(
     {
         src:"img/icon-php.png",
