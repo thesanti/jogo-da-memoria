@@ -45,17 +45,20 @@ const memoryCard = () => {
     console.log("Entrei no memory-card, estou fora da função");
 
 
-    return ({nameClass, src, alt}) => `
-        <article class="memory-card ${nameClass}" onClick="handleClick()">
+    return ({src, alt}) => `
+        <article class="memory-card -front" onClick="handleClick()">
             <img class="icon"
                 src="${src}"
                 alt="${alt}"
             />
         </article>
+        <article class="memory-card" onClick="handleClick()">
+            <img class="icon"
+                src="./img/icon-collabcode.png"
+                alt="Logo da collabcode, o gueio."
+            />
+        </article>
     `;
-
 };
 
-function handleClick(){
-    console.log('chora');
-}
+const handleClick = () => console.log("Cliquei no card");
