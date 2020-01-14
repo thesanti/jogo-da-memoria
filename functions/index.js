@@ -1,11 +1,8 @@
-let infos = {
-    name: "Sem valor",
-    email: "Sem valor"
+function pessoa(name, email){
+    return {
+        name: name,
+        email: email
+    };
 };
 
-const imprimeDados = (name,email) => () => infos = {name, email};
-
-console.log("Infos antes", infos);
-const salvaDados = imprimeDados("Lucas Santi", "lucassanti_@hotmail.com");
-salvaDados();
-console.log("Info depois", infos);
+console.log(pessoa("Lucas Santi", "lucassanti_@hotmail.com"));
