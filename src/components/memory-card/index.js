@@ -7,6 +7,13 @@ const memoryCard = () => {
         .memory-card{
             width: 155px;
             height: 155px;
+            position: relative;
+        }
+
+        .memory-card .card{
+            position:absolute;
+            width: 155px;
+            height: 155px;
             background-color: #f25a70;
             border-radius: 30px;
             display: flex;
@@ -16,11 +23,19 @@ const memoryCard = () => {
             cursor: pointer;
         }
 
-        .memory-card.-front{
+        .memory-card .card.-front{
             background-color: transparent;
         }
 
-        .memory-card.-front::before{
+        .memory-card.-active .card{
+            display: none;
+        }
+
+        .memory-card.-active .card.-front{
+            display: flex;
+        }
+        
+        .memory-card .card.-front::before{
             content: "";
             background-color: #d5d5d5;
             border-radius: 50%;
@@ -29,12 +44,12 @@ const memoryCard = () => {
             position: absolute;
         }
 
-        .memory-card > .icon{
+        .memory-card .card > .icon{
             width: 100px;
             height: 100px;
         }
 
-        .memory-card.-front > .icon{
+        .memory-card .card.-front > .icon{
             position: absolute;
             transform: translateY(-10px);
         }
@@ -44,21 +59,22 @@ const memoryCard = () => {
 
     console.log("Entrei no memory-card, estou fora da função");
 
-
     return ({src, alt}) => `
-        <article class="memory-card -front" onClick="handleClick()">
+    <div class="memory-card" onClick="handleClick()">
+        <article class="card -front">
             <img class="icon"
                 src="${src}"
                 alt="${alt}"
             />
         </article>
-        <article class="memory-card" onClick="handleClick()">
+        <article class="card">
             <img class="icon"
                 src="./img/icon-collabcode.png"
                 alt="Logo da collabcode, o gueio."
             />
         </article>
+        </div>
     `;
 };
 
-const handleClick = () => console.log("Cliquei no card");
+const handleClick = () => console.log("eai");
