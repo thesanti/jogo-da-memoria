@@ -60,7 +60,7 @@ const memoryCard = () => {
     console.log("Entrei no memory-card, estou fora da função");
 
     return ({src, alt}) => `
-    <div class="memory-card" onClick="handleClick()">
+    <div class="memory-card" onClick="handleClick(this)">
         <article class="card -front">
             <img class="icon"
                 src="${src}"
@@ -77,4 +77,4 @@ const memoryCard = () => {
     `;
 };
 
-const handleClick = () => console.log("eai");
+const handleClick = $component => $component.classList.toggle("-active");
