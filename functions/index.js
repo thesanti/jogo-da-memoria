@@ -1,22 +1,11 @@
-let infos = {};
-
-function imprimirDados(name, email){
-    console.log("entrei na função");
-    console.log("Name", name);
-    console.log("Email", email);
-
-    return function(){
-        infos = {
-            name,
-            email
-        };
-    };
+let infos = {
+    name: "Sem valor",
+    email: "Sem valor"
 };
 
-console.log("Infos antes:", infos);
+const imprimeDados = (name,email) => () => infos = {name, email};
 
-const salvaDados = imprimirDados("Lucas Santi","lucassanti_@hotmail.com");
-
+console.log("Infos antes", infos);
+const salvaDados = imprimeDados("Lucas Santi", "lucassanti_@hotmail.com");
 salvaDados();
-
-console.log("Infos depois", infos);
+console.log("Info depois", infos);
